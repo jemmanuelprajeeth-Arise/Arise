@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arise</string>
+    <string name="accessibility_service_description">
+        Arise Session Guard monitors which app is in the foreground during an active session.
+        When a blocked app is detected, Arise covers it with a wall screen.
+        No data is collected or transmitted.
+    </string>
+</resources>

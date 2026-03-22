@@ -1,0 +1,33 @@
+# React Native
+node_modules/
+npm-debug.*
+*.orig.*
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+
+# iOS
+ios/Pods/
+ios/build/
+*.xcworkspace/
+!default.xcworkspace
+Gemfile.lock
+
+# Signing keys — NEVER commit
+arise-release.keystore
+google-services.json
+GoogleService-Info.plist
+
+# Env
+.env
+.env.*
+
+# Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.metro-health-check*
