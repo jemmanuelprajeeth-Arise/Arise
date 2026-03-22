@@ -2,12 +2,14 @@
  * DungeonBreakScreen.tsx — Tron Amber Theme
  */
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, BackHandler } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, BackHandler } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { triggerDungeonBreak } from '../services/BlockerService';
 import { useAriseStore } from '../store/useAriseStore';
 import { C, F } from '../theme/tron';
-import { TronDivider, Label, TronButton, CornerBrackets } from '../components/TronUI';
+import { TronDivider, Label, TronButton, CornerBrackets, StreakGrid } from '../components/TronUI';
+import { getLevel, getLevelProgress, STREAK_DAYS, STREAK_BONUS_XP } from '../utils/xp';
+import { formatDuration, todayString, isNightTime } from '../utils/time';
 import type { RootStackParamList } from '../navigation/AppNavigator';
 
 type Route = RouteProp<RootStackParamList, 'DungeonBreak'>;
@@ -152,13 +154,8 @@ export function DungeonBreakScreen() {
 }
 
 // ─────────────────────────────────────────────────────────────
-// CompleteScreen.tsx — Tron Amber Theme
+// CompleteScreen — Tron Amber Theme
 // ─────────────────────────────────────────────────────────────
-import { ScrollView } from 'react-native';
-import { useEffect } from 'react';
-import { getLevel, getLevelProgress, STREAK_DAYS, STREAK_BONUS_XP } from '../utils/xp';
-import { formatDuration } from '../utils/time';
-import { StreakGrid } from '../components/TronUI';
 
 export function CompleteScreen() {
   const navigation = useNavigation<any>();
@@ -247,8 +244,6 @@ export function CompleteScreen() {
     </SafeAreaView>
   );
 }
-
-import { todayString as todayStringImport, isNightTime as isNightTimeImport } from '../utils/time';
 
 const styles = StyleSheet.create({
   screen:      { flex: 1, backgroundColor: C.bg },
