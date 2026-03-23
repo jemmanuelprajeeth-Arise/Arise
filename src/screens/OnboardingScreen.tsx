@@ -191,7 +191,7 @@ export default function OnboardingScreen() {
 
 const styles = StyleSheet.create({
   screen:            { flex: 1, backgroundColor: C.bg },
-  progressRow:       { flexDirection: 'row', gap: 4, padding: '16px 24px 0', paddingHorizontal: 24, paddingTop: 16, paddingBottom: 0 },
+  progressRow:       { flexDirection: 'row', gap: 4, paddingHorizontal: 24, paddingTop: 16, paddingBottom: 0 },
   progressSeg:       { flex: 1, height: 2, backgroundColor: C.faint },
   progressSegActive: { backgroundColor: C.amber },
   scrollContent:     { paddingHorizontal: 20, paddingTop: 0, paddingBottom: 0 },
